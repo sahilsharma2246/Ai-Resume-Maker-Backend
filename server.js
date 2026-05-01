@@ -1,4 +1,3 @@
-
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -12,7 +11,7 @@ app.use(express.json());
 
 mongoose
   .connect("mongodb://127.0.0.1:27017/resumeDB")
-  .then(() => console.log("MongoDB Connected"))
+  .then(() => console.log("MongoDB-Connected"))
   .catch((err) => console.log(err));
 
 app.use("/api/resume", resumeRoutes);
